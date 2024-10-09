@@ -3,7 +3,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "./back/main.py",
+      "src": "back/main.py",
       "use": "@vercel/python"
     }
   ],
@@ -11,11 +11,11 @@
     {
       "src": "/add_instituicao",
       "methods": ["POST"],
-      "dest": "./back/main.py"
+      "dest": "back/main.py"
     },
     {
       "src": "/(.*)", 
-      "dest": "./back/main.py"
+      "dest": "back/main.py"
     }
   ]
 }
