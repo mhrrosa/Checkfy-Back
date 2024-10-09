@@ -1474,4 +1474,4 @@ def atualizar_status_avaliacao(id_avaliacao):
 
 if __name__ == '__main__':
     # eventlet.wsgi.server(eventlet.listen(('127.0.0.1', 5000)), app)
-    WSGIServer(('127.0.0.1', 5000),app).serve_forever()
+    app.run()
