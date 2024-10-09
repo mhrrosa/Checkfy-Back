@@ -34,8 +34,7 @@ db_config = {
     "host": "database-checkfy.cz4g8uek4dbw.us-east-2.rds.amazonaws.com",
     "user": "admin",  
     "password": "checkfyAJM", 
-    "database": "checkfy",
-    "port": 3306  
+    "database": "checkfy", 
 }
 
 def get_db():
