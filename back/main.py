@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, send_from_directory, g
 from flask_cors import CORS
 import mysql.connector
 from back.Nivel import Nivel
-from back.Database import Database
 from back.Processo import Processo
 from back.ResultadoEsperado import ResultadoEsperado
 from back.Avaliacao import Avaliacao
@@ -20,13 +19,14 @@ from back.Relatorio import Relatorio
 from back.GrauImplementacao import GrauImplementacao
 from back.ImplementacaoOrganizacional import ImplementacaoOrganizacional
 from back.ImplementacaoProjeto import ImplementacaoProjeto
+from back.Database import Database
 import os
 from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "https://checkfy-front.vercel.app"}})
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/tmp/uploads'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 

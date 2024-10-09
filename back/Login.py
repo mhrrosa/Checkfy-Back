@@ -1,5 +1,5 @@
 from werkzeug.security import check_password_hash
-from Database import Database
+from back.Database import Database
 import traceback
 
 class Login:

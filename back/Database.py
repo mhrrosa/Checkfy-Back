@@ -15,7 +15,6 @@ class Database:
             user=self.user,
             password=self.password,
             database=self.database,
-            port=3306
         )
         self.cursor = self.conn.cursor()
 
