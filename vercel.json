@@ -1,15 +1,21 @@
+
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "back/main.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "back/main.py"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "./back/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/add_instituicao",
+      "methods": ["POST"],
+      "dest": "./back/main.py"
+    },
+    {
+      "src": "/(.*)", 
+      "dest": "./back/main.py"
+    }
+  ]
+}
