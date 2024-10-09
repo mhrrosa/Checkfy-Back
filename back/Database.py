@@ -1,4 +1,4 @@
-
+import mysql.connector
 
 class Database:
     def __init__(self, host, user, password, database):
