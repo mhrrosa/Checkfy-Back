@@ -31,10 +31,11 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 # Conexão com o banco de dados MySQL
 db_config = {
-    "host": "127.0.0.1",
-    "user": "root",
-    "password": "root",
-    "database": "checkfy"
+    "host": "database-checkfy.cz4g8uek4dbw.us-east-2.rds.amazonaws.com",
+    "user": "admin",  
+    "password": "checkfyAJM", 
+    "database": "checkfy",
+    "port": 3306  
 }
 
 def get_db():
