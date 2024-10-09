@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, send_from_directory, g
 from flask_cors import CORS
+import mysql.connector
 from back.Nivel import Nivel
 from back.Database import Database
 from back.Processo import Processo
