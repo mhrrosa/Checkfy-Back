@@ -1,24 +1,24 @@
 from flask import Flask, request, jsonify, send_from_directory, g
 from flask_cors import CORS
-import Database
-from .Nivel import Nivel
-from .Processo import Processo
-from .ResultadoEsperado import ResultadoEsperado
-from .Avaliacao import Avaliacao
-from .Projeto import Projeto
-from .Documento import Documento
-from .Versao_Modelo import Versao_Modelo
-from .Empresa import Empresa
-from .Instituicao import Instituicao
-from .Login import Login
-from .Cadastro import Cadastro
-from .Atividade import Atividade
-from .Email import Email
-from .Auditor import Auditor
-from .Relatorio import Relatorio
-from .GrauImplementacao import GrauImplementacao
-from .ImplementacaoOrganizacional import ImplementacaoOrganizacional
-from .ImplementacaoProjeto import ImplementacaoProjeto
+from Nivel import Nivel
+from Database import Database
+from Processo import Processo
+from ResultadoEsperado import ResultadoEsperado
+from Avaliacao import Avaliacao
+from Projeto import Projeto
+from Documento import Documento
+from Versao_Modelo import Versao_Modelo
+from Empresa import Empresa
+from Instituicao import Instituicao
+from Login import Login
+from Cadastro import Cadastro
+from Atividade import Atividade
+from Email import Email
+from Auditor import Auditor
+from Relatorio import Relatorio
+from GrauImplementacao import GrauImplementacao
+from ImplementacaoOrganizacional import ImplementacaoOrganizacional
+from ImplementacaoProjeto import ImplementacaoProjeto
 import os
 from gevent.pywsgi import WSGIServer
 

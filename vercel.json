@@ -9,8 +9,8 @@
   ],
   "routes": [
     {
-      "src": "/add_instituicao",
-      "methods": ["POST"],
+      "src": "/get_instituicoes",
+      "methods": ["GET"],
       "dest": "back/main.py"
     },
     {
