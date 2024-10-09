@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, send_from_directory, g
 from flask_cors import CORS
-from .Database import Database
+from Database import Database
 from .Nivel import Nivel
 from .Processo import Processo
 from .ResultadoEsperado import ResultadoEsperado
