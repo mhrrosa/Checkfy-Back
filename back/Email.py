@@ -1,7 +1,7 @@
 
 '''
         S: ajmCheckfy_0
-        bsvs ordr etbm oatk
+        vhgx tcej ayum ltxq
 '''
 import smtplib
 from datetime import datetime
@@ -50,8 +50,8 @@ class Email:
                 nome_versao_modelo = row['Nome_Versao_Modelo']
 
                 # Configurando o e-mail
-                remetente = "checkfy123@gmail.com"
-                destinatario = "checkfy123@gmail.com"
+                remetente = "checkfyadm@gmail.com"
+                destinatario = "checkfyadm@gmail.com"
                 assunto = "Solicitação de Aprovação da Softex - Avaliação ID {}".format(id)
                 
                 corpo = f"""
@@ -83,7 +83,7 @@ class Email:
                 try:
                     with smtplib.SMTP('smtp.gmail.com', 587) as server:
                         server.starttls()
-                        server.login(remetente, "bsvsordretbmoatk")
+                        server.login(remetente, "vhgxtcejayumltxq")
                         server.send_message(mensagem)
                     print("E-mail enviado com sucesso!")
                 except Exception as e:
@@ -133,7 +133,7 @@ class Email:
                 nivel_solicitado =row['Nivel_Solicitado']
                 nome_versao_modelo = row['Nome_Versao_Modelo']
                 # Configurando o e-mail
-                remetente = "checkfy123@gmail.com"
+                remetente = "checkfyadm@gmail.com"
                 destinatario = email_auditor
                 assunto = f"Informações da Avaliação Inicial - ID {id}"
 
@@ -169,7 +169,7 @@ class Email:
                 try:
                     with smtplib.SMTP('smtp.gmail.com', 587) as server:
                         server.starttls()
-                        server.login(remetente, "bsvsordretbmoatk")
+                        server.login(remetente, "vhgxtcejayumltxq")
                         server.send_message(mensagem)
                     print("E-mail enviado com sucesso!")
                 except Exception as e:
@@ -207,7 +207,7 @@ class Email:
                     data_avaliacao_final_formatada = data_avaliacao_final
 
                 # Configurando o e-mail
-                remetente = "checkfy123@gmail.com"
+                remetente = "checkfyadm@gmail.com"
                 destinatario = email_auditor
                 assunto = f"Data da Avaliação Final - ID {id}"
 
@@ -236,7 +236,7 @@ class Email:
                 try:
                     with smtplib.SMTP('smtp.gmail.com', 587) as server:
                         server.starttls()
-                        server.login(remetente, "bsvsordretbmoatk")
+                        server.login(remetente, "vhgxtcejayumltxq")
                         server.send_message(mensagem)
                     print("E-mail enviado com sucesso!")
                 except Exception as e:
@@ -249,8 +249,8 @@ class Email:
 
     def solicitar_link_formulario_feedback(self, id_avaliacao):
 
-        remetente = "checkfy123@gmail.com"
-        destinatario = "checkfy123@gmail.com"
+        remetente = "checkfyadm@gmail.com"
+        destinatario = "checkfyadm@gmail.com"
         assunto = "Solicitação de Link do Formulário de Feedback"
 
         corpo = f"""
@@ -276,7 +276,7 @@ class Email:
         try:
             with smtplib.SMTP('smtp.gmail.com', 587) as server:
                 server.starttls()
-                server.login(remetente, "bsvsordretbmoatk")
+                server.login(remetente, "vhgxtcejayumltxq")
                 server.send_message(mensagem)
             print("E-mail de solicitação de link do formulário de feedback enviado com sucesso!")
         except Exception as e:
@@ -302,7 +302,7 @@ class Email:
                 for participante in participantes:
                     email_participante = participante['Email']
 
-                    remetente = "checkfy123@gmail.com"
+                    remetente = "checkfyadm@gmail.com"
                     destinatario = email_participante
                     assunto = "Resultado da Avaliação Final"
 
@@ -329,7 +329,7 @@ class Email:
                     try:
                         with smtplib.SMTP('smtp.gmail.com', 587) as server:
                             server.starttls()
-                            server.login(remetente, "bsvsordretbmoatk")
+                            server.login(remetente, "vhgxtcejayumltxq")
                             server.send_message(mensagem)
                         print(f"E-mail enviado com sucesso para {email_participante}!")
                     except Exception as e:
@@ -405,7 +405,7 @@ class Email:
                 print(email_auditor)
 
                 # Configurando o e-mail
-                remetente = "checkfy123@gmail.com"
+                remetente = "checkfyadm@gmail.com"
                 destinatario = email_auditor
                 assunto = f"Informações da Avaliação Final - ID {id}"
 
@@ -440,7 +440,7 @@ class Email:
                 try:
                     with smtplib.SMTP('smtp.gmail.com', 587) as server:
                         server.starttls()
-                        server.login(remetente, "bsvsordretbmoatk")
+                        server.login(remetente, "vhgxtcejayumltxq")
                         server.send_message(mensagem)
                     print("E-mail enviado com sucesso!")
                 except Exception as e:
@@ -471,7 +471,7 @@ class Email:
                 for participante in participantes:
                     email_participante = participante['Email']
 
-                    remetente = "checkfy123@gmail.com"
+                    remetente = "checkfyadm@gmail.com"
                     destinatario = email_participante
                     assunto = "Resultado da Avaliação Final"
 
@@ -498,7 +498,7 @@ class Email:
                     try:
                         with smtplib.SMTP('smtp.gmail.com', 587) as server:
                             server.starttls()
-                            server.login(remetente, "bsvsordretbmoatk")
+                            server.login(remetente, "vhgxtcejayumltxq")
                             server.send_message(mensagem)
                         print(f"E-mail enviado com sucesso para {email_participante}!")
                     except Exception as e:
