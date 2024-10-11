@@ -1,5 +1,5 @@
 from werkzeug.security import generate_password_hash
-from Database import Database
+from back.Database import Database
 
 class Cadastro:
     def __init__(self, db: Database):

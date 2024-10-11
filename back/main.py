@@ -1,40 +1,41 @@
 from flask import Flask, request, jsonify, send_from_directory, g
 from flask_cors import CORS
-from Database import Database
-from Nivel import Nivel
-from Processo import Processo
-from ResultadoEsperado import ResultadoEsperado
-from Avaliacao import Avaliacao
-from Projeto import Projeto
-from Documento import Documento
-from Versao_Modelo import Versao_Modelo
-from Empresa import Empresa
-from Instituicao import Instituicao
-from Login import Login
-from Cadastro import Cadastro
-from Atividade import Atividade
-from Email import Email
-from Auditor import Auditor
-from Relatorio import Relatorio
-from GrauImplementacao import GrauImplementacao
-from ImplementacaoOrganizacional import ImplementacaoOrganizacional
-from ImplementacaoProjeto import ImplementacaoProjeto
+import mysql.connector
+from back.Nivel import Nivel
+from back.Processo import Processo
+from back.ResultadoEsperado import ResultadoEsperado
+from back.Avaliacao import Avaliacao
+from back.Projeto import Projeto
+from back.Documento import Documento
+from back.Versao_Modelo import Versao_Modelo
+from back.Empresa import Empresa
+from back.Instituicao import Instituicao
+from back.Login import Login
+from back.Cadastro import Cadastro
+from back.Atividade import Atividade
+from back.Email import Email
+from back.Auditor import Auditor
+from back.Relatorio import Relatorio
+from back.GrauImplementacao import GrauImplementacao
+from back.ImplementacaoOrganizacional import ImplementacaoOrganizacional
+from back.ImplementacaoProjeto import ImplementacaoProjeto
+from back.Database import Database
 import os
 from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "https://checkfy-front.vercel.app"}})
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/tmp/uploads'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 # Conexão com o banco de dados MySQL
 db_config = {
-    "host": "127.0.0.1",
-    "user": "root",
-    "password": "root",
-    "database": "checkfy"
+    "host": "database-checkfy.cz4g8uek4dbw.us-east-2.rds.amazonaws.com",
+    "user": "admin",  
+    "password": "checkfyAJM", 
+    "database": "checkfy", 
 }
 
 def get_db():
@@ -1474,4 +1475,4 @@ def atualizar_status_avaliacao(id_avaliacao):
 
 if __name__ == '__main__':
     # eventlet.wsgi.server(eventlet.listen(('127.0.0.1', 5000)), app)
-    WSGIServer(('127.0.0.1', 5000),app).serve_forever()
+    app.run()

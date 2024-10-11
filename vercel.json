@@ -1,0 +1,21 @@
+
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "back/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/get_instituicoes",
+      "methods": ["GET"],
+      "dest": "back/main.py"
+    },
+    {
+      "src": "/(.*)", 
+      "dest": "back/main.py"
+    }
+  ]
+}
